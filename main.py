@@ -10,7 +10,7 @@ import numpy as np
 
 # Locate model in the same directory as main.py
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODEL_FILE = os.path.join(BASE_DIR, "pneumonia_cnn_model.keras")
+MODEL_FILE = os.path.join(BASE_DIR, "pneumonia_cnn_model (1).keras")
 
 CLASS_NAMES = ["NORMAL", "PNEUMONIA"]
 model = None
@@ -23,7 +23,7 @@ async def lifespan(app: FastAPI):
         try:
             # compile=False loads weights and architecture for fast inference
             model = keras.models.load_model(MODEL_FILE, compile=False)
-            print("✓ pneumonia_cnn_model.keras loaded successfully!")
+            print("✓ pneumonia_cnn_model (1).keras loaded successfully!")
         except Exception as e:
             print(f"✗ Failed to load model: {e}")
     else:
